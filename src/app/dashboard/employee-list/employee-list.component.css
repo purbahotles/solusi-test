@@ -1,0 +1,12 @@
+.container {
+  width: 80%;
+  margin: 10%;
+}
+
+form {
+  margin: 10px;
+}
+
+.addNumber {
+  margin-left: 20px;
+}

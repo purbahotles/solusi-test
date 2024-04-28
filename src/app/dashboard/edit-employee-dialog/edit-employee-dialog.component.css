@@ -1,0 +1,7 @@
+.icon-delete {
+  position: absolute;
+  top: 11px;
+}
+.mat-mdc-card-content:last-child {
+  width: 120px;
+}

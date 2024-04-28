@@ -1,0 +1,25 @@
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-card>
+    <mat-card-header class="card-header">Form Edit</mat-card-header>
+      <mat-card-content>
+        <form #employeeForm="ngForm" class="form-edit">
+          <mat-form-field *ngFor="let digit of numberArray; let i = index" appearance="fill">
+            <mat-label>Input {{i + 1}}</mat-label>
+              <mat-card-content>                
+                  <input type="number" matInput name="digit{{i}}" [ngModel]="numberArray[i]" (ngModelChange)="numberArray[i] = $event" required pattern="[0-9]*">
+                    <button class="icon-delete" mat-icon-button color="warn" (click)="deleteRow(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-card-content>
+          </mat-form-field>
+        </form>
+        <mat-grid-tile>
+          <button mat-raised-button color="primary" type="submit" (click)="saveChanges()">Save</button>
+        </mat-grid-tile>
+          <mat-grid-tile>
+          <button mat-raised-button type="submit" (click)="closeDialog()">Cancel</button>
+        </mat-grid-tile>
+      </mat-card-content>
+  </mat-card>
+</mat-grid-list>
